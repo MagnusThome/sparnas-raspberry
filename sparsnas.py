@@ -172,6 +172,8 @@ def error_exit(error):
 
 if __name__ == '__main__':
 
+	os.chdir(os.path.dirname(sys.argv[0]))
+	
 	if len(sys.argv) == 2 and sys.argv[1] == '-v':
 		verbose = True
 		print("{:26} {:>7} {:10} {:10}".format('Timestamp', 'Display', 'Wanted loop', 'Actual loop'))
