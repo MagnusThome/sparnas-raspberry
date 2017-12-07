@@ -47,7 +47,7 @@ sudo nano /etc/rc.local
 ```
 - Add the below line just before the line "exit 0" in rc.local
 ```
-/home/pi/sparsnas.py
+/home/pi/sparsnas.py &
 ```
 - Exit and save the file: ctrl-x y
 - Reboot
