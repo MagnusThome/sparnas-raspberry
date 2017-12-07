@@ -18,7 +18,7 @@ sudo apt-get install pigpio python-pigpio python3-pigpio -y
 sudo systemctl enable pigpiod.service
 sudo systemctl start pigpiod.service
 ```  
-The default GPIO pin used is gpio 17 (which equals to pin 11 on a Model 3 Pi). You can of course choose to use any other pin by updating the python code. Google how to connect a LED to the Pi.
+The default GPIO pin used to connect the LED to the Pi is GPIO 17 (which equals to pin 11 on a Model 3 Pi). You can of course choose to use any other pin by updating the python code. Google how to connect an LED to the Pi. A good source for a free IR-LED is an old unused tv remote.
 
 The script works with both Python 2 and 3
 
