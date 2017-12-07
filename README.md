@@ -10,7 +10,6 @@ Accuracy. Well, it's so so. Remember that we are not transmitting the number to 
 
 
 
-
 # Prerequisites
 
 Install pigpio on your Raspberry:
@@ -21,6 +20,20 @@ sudo systemctl start pigpiod.service
 ```  
 The default GPIO pin used is gpio 17 (which equals to pin 11 on a Model 3 Pi). You can of course choose to use any other pin by updating the python code.
 
-The settings file ```sparsnas.display``` should contain one single line with the number to display.
+
+# Settings file
+
+The settings file ```sparsnas.display``` should contain one single line with the number to display on Sparsnäs.
+
+
+# Options
+
+With the option -v a log of each blink is printed out on stdout. The columns are:
+
+- Timestamp
+- Number to display
+- The wanted time between blinks
+- The actual time between blinks
+
 
 
