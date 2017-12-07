@@ -37,6 +37,26 @@ With the option "-v" a log of each blink is printed out on stdout. The columns a
 - The wanted time between blinks
 - The actual time between blinks
 
+# Start at boot
+
+If you want the script to automatically start at boot this is one way of doing it:
+
+- Edit /etc/rc.local
+```
+sudo nano /etc/rc.local
+```
+- Add the below line just before the line "exit 0" in rc.local
+```
+/home/pi/sparsnas.py
+```
+- Exit and save the file: ctrl-x y
+- Reboot
+- Update the number in the file ```sparsnas.settings``` at any time.
+
+# Have fun
+
+
+
 
 
 
