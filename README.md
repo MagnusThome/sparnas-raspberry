@@ -20,6 +20,8 @@ sudo systemctl start pigpiod.service
 ```  
 The default GPIO pin used is gpio 17 (which equals to pin 11 on a Model 3 Pi). You can of course choose to use any other pin by updating the python code.
 
+The script works with both Python 2 and 3
+
 
 # Settings file
 
@@ -28,12 +30,14 @@ The settings file ```sparsnas.display``` should contain one single line with the
 
 # Options
 
-With the option -v a log of each blink is printed out on stdout. The columns are:
+With the option "-v" a log of each blink is printed out on stdout. The columns are:
 
 - Timestamp
 - Number to display
 - The wanted time between blinks
 - The actual time between blinks
+
+
 
 
 
