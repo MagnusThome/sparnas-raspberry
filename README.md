@@ -51,7 +51,7 @@ sudo nano /etc/rc.local
 ```
 - Exit and save the file: ctrl-x y
 - Reboot
-- Update the number in the file ```sparsnas.settings``` at any time.
+- Update the number in the file ```sparsnas.display``` at any time.
 
 # Have fun
 
