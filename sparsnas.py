@@ -117,7 +117,8 @@ def readsettingsfile():
 	display = ''
 
 	if not os.path.isfile(settingsfile):
-		error_exit('ERROR EXIT: No settings file found: {}'.format(settingsfile))
+		errormsg('No settings file found: {}'.format(settingsfile))
+		return 0
 	else:
 		try:
 			with open(settingsfile) as file:
@@ -125,10 +126,12 @@ def readsettingsfile():
 					if re.search(r"[0-9]", line):
 						display = re.sub(r'[^0-9]', '', line)
 		except:
-			error_exit('ERROR EXIT: Could not open settings file: {}'.format(settingsfile))
+			errormsg('Could not open settings file: {}'.format(settingsfile))
+			return 0
 			
 	if display == '':
-		error_exit('ERROR EXIT: No display value found in settings file: {}'.format(settingsfile))
+		errormsg('No display value found in settings file: {}'.format(settingsfile))
+		return 0
 	else:
 		return display
 
@@ -144,7 +147,8 @@ def getlooptime(display):
 		try:
 			looptime = ((1/float(display))*36)*(sparsnas_pulse_setting/1000)
 		except:
-			error_exit('ERROR EXIT. Invalid display number.')
+			errormsg('Invalid display number.')
+			return 9999.9999
 				
 		return looptime
 	
@@ -161,10 +165,11 @@ def verboseprint(start, prevstart, display, looptime):
 
 # -----------------------------------------------------------------------------------------------
 
+def errormsg(error):
+	sys.stderr.write('ERROR: sparsnas.py: ' + error + '\n')
+	return
 
-def error_exit(error):
-	print('sparsnas.py: {}'.format(error))
-	sys.exit(-1)
+
 
 
 
