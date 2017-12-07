@@ -4,7 +4,7 @@ Connect an IR-LED to your Raspberry Pi and make the LED blink into the Sparsnäs
 
 The number to be displayed is picked up from a settings file that the python script checks every few seconds, continuously updating the displayed number. Preferably start the script at boot and then change the number to display whenever you want by updating the settings file.
 
-With the default setting of pulses per KWh at 10000 the highest number that is feasible to display is a thousand or so. Beyond that the blink frequency gets a bit high which lowers the display accuracy. Remember that we are not transmitting the number to display as a digital number but as a time delay which can vary just so very slightly due to system load changing in the Raspberry. There is an offset setting in the python code that you can fine tune to get the correct values displayed.
+With the default setting of pulses per KWh at 10000 the highest number that is feasible to display is a thousand or so. Beyond that the blink frequency gets a bit high which lowers the display accuracy. Remember that we are not transmitting the number to display as a digital number but as a time delay which can vary just so very slightly due to system load changing in the Raspberry. There is an offset setting in the python code that you can fine tune to get the correct values displayed. A higher offset value renders a slightly higher number on the display. 
 
 To display larger numbers just use a lower pulse per KWh setting in Sparsnäs and update the python code accordingly.
 
