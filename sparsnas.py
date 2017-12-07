@@ -106,7 +106,7 @@ def pollsettingsfile(display, start, nexttime):
 			time.sleep(filepollingseconds-1)	
 	
 
-	return display, nexttime
+
 
 
 
@@ -164,7 +164,7 @@ def verboseprint(start, prevstart, display, looptime):
 
 def error_exit(error):
 	print('sparsnas.py: {}'.format(error))
-	exit()
+	sys.exit(-1)
 
 
 
