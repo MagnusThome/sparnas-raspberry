@@ -12,12 +12,12 @@ To display larger numbers just use a lower pulse per KWh setting in Sparsnäs an
 # Prerequisites
 
 Install pigpio on your Raspberry:
-
-  sudo apt-get install pigpio python-pigpio python3-pigpio -y
-  sudo systemctl enable pigpiod.service
-  sudo systemctl start pigpiod.service
-  
-The default GPIO pin used is gpio 17 (which equals to pin 11 on a Model 3 Pi). You can of course choose to use any other pin in the python code.
+```
+sudo apt-get install pigpio python-pigpio python3-pigpio -y
+sudo systemctl enable pigpiod.service
+sudo systemctl start pigpiod.service
+```  
+The default GPIO pin used is gpio 17 (which equals to pin 11 on a Model 3 Pi). You can of course choose to use any other pin by updating the python code.
 
 
 
