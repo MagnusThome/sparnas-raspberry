@@ -45,7 +45,7 @@ If you want the script to automatically start at boot this is one way of doing i
 ```
 sudo nano /etc/rc.local
 ```
-- Add the below line just before the line "exit 0" in rc.local
+- Add the below line just before the line "exit 0" in rc.local. Adjust the path to where you placed the files!
 ```
 /home/pi/sparsnas.py &
 ```
