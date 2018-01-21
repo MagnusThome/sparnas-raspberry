@@ -145,7 +145,7 @@ def getlooptime(display):
 		return 9999.9999	# Long dummy looptime. To display "0" equals infinite looptime.
 	else:
 		try:
-			looptime = ((1/float(display))*36)*(sparsnas_pulse_setting/1000)
+			looptime = (1/float(display)) * 360 * (10000/float(sparsnas_pulse_setting))
 		except:
 			errormsg('Invalid display number.')
 			return 9999.9999
